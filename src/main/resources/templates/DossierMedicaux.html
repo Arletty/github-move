@@ -4,22 +4,405 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <<link rel="stylesheet" type="text/css" href="base_temp.css" media="screen"/>
+    <style>
+         :root{
+            --notif-size:40px;
+            --userinfo-height:35px;
+        }
+        *{
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden !important;
+            box-sizing:border-box;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+        #navbar{
+            width: 20%;
+            border: 1px  black solid;
+            height: 100%;
+            background-color: #6d5ce8;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #content{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+#userinfo{
+            height: var(--userinfo-height);
+            width: 20%;
+            float: right;
+            display: flex;
+            justify-content: space-between;
+            margin-left:auto;
+            align-items: center;
+
+}
+        
+:root{
+            --action-height:18px;
+            --action-padding:15px;
+            --logo-height: 150px;
+            --logo-width:200px;
+            --Confirmation-width:250px;
+            --confirmation-heigth:100%;
+
+}
+
+ #action{
+            display: flex;
+            font-size: 18;
+            height: calc(var(--action-height) + var(--action-padding));
+            padding: var(--action-padding);
+            margin-left: 20px;
+            padding-left: 30px;
+            color: silver;
+            font-size: 20px;
+            margin-bottom: var(--action-padding);
+}
+#contenu{
+ height:calc(100% - calc( calc(var(--action-height) + var(--action-padding)) + var(--userinfo-height)));
+ display: flex;
+}
+
+#deconnexion{
+            display: flex;
+            padding: 4px;
+            background: rgba(179, 175, 175, 0.507);
+            justify-content: space-between;
+            border-radius: 60px;
+            height: 100%;
+            width:75%;
+            align-items: center;
+}
+
+#deconnexion button{
+            border-radius: 50%;
+            width: calc(var(--notif-size) - 20px);
+            height: calc(var(--notif-size) - 20px);
+}
+   
+#notification{
+            height: var(--notif-size);
+            width: var(--notif-size);
+}
+
+#logo{
+       height:var(--logo-height) ;
+        width: var(--logo-width);
+        margin: 20px;
+}
+
+:root{
+      --menu-padtop: 40%;
+      --menu-padleft:15%;
+      --identite-heigth:200px;
+      --identite-:200px;
+      --identite-margin:20px;
+
+}
+
+
+ #menu{
+      padding-top:var(--menu-padtop) ;
+      padding-left: var(--menu-padleft);
+      font-size:x-large;
+      text-decoration: none;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+#confirmation{
+  display: flex;
+  flex-direction: column;
+  width: var(--Confirmation-width);
+  height: var(--confirmation-heigth);
+  
+}
+
+#identite{
+  display: flex;
+  flex-direction: column;
+  width: var(--identite-);
+  height: var(--identite-heigth);
+  background: #6d5ce8;
+  border-radius: 5%;
+  border-color: #6d5ce8 ;
+  margin-left: var(--identite-margin);
+  margin-bottom: var(--identite-margin);
+  padding: 5px;
+}
+
+#boutons{
+  width: var(--Confirmation-width);
+  height: auto;
+  margin-left: calc(var(--identite-margin) + 15px);
+}
+
+
+#boutons span>button:nth-last-child(2){
+  background-color: red;
+  font-size: large;
+  text-align: center;
+  color: white;
+}
+
+#boutons span>button:nth-last-child(1){
+  background-color:#3d3483;
+  font-size: large;
+  text-align: center;
+  color: white;
+}
+:root{
+  --modif-padding:10px;
+  --inline-space: 15px;
+  --deco-height:5px;
+}
+#modification{
+  padding: var(--modif-padding);
+  width: calc(100% - var(--Confirmation-width));
+  
+}
+
+#pic{
+  position: relative;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: #4c42a5 ;
+  margin-left:58px;
+  margin-top: 30px;
+}
+
+.name{
+  width:calc(calc(var(--identite-) / 2) - 25px);
+  height:20px;
+  margin-top: 30px;
+  margin-left: 10px;
+  background-color: #6d5ce8;
+  border: none;
+  text-align: center;
+}
+
+#deco{
+  height: var(--deco-height);
+  background-color: grey;
+  width: 100%;
+  margin-bottom: var(--inline-space);
+}
+
+:root{
+  --base-height:5px;
+  --entete-height: 30px;
+  --entete-margin: 5px;
+}
+#base{
+  height: var(--base-height);
+  width: calc(100% - var(--modif-padding));
+  margin-left: 5px;
+  margin-bottom: var(--inline-space);
+  display: flex;
+  justify-content: space-between;
+ 
+}
+#antecedents{
+   height:  calc(100% - var(--base-height) - 5px - var(--inline-space) - var(--deco-height));
+   width: calc(100% - var(--modif-padding));
+   margin-left: 5px;
+   display: flex;
+   flex-direction: column;
+}
+
+.entete{
+  background-color: #7323ff;
+  margin-bottom: var(--entete-margin);
+  height: var(--entete-height);
+  color: white;
+  text-align: left;
+  padding-left: var(--entete-margin);
+  padding-top: var(--entete-margin);
+}
+ .corps{
+   background-color:#e0e1ff ;
+   height: calc(100% - var(--entete-height) - var(--entete-margin));
+   border: none;
+ }
+
+#inf .corps{
+  width: 350px;
+}
+
+
+/*disable the sub-menu items*/ 
+.sub-menu {
+  position: absolute;
+  width: auto;
+  display:none;
+}
+
+.accordeon:hover .sub-menu{
+  display: block;
+}
+:root{
+  --rechercher-width:150px;
+  --liste-padding:5PX;
+  --margin-picture-left:35px;
+  --margin-picture-top:30px;
+  --picture-height:50px;
+}
+#rechercher{
+  border: 1px #4c42a5 solid;
+  border-radius: 30px;
+  height: 30px;
+  width: var(--rechercher-width);
+  margin-left:var(--identite-margin);
+  margin-bottom: 10px;
+  text-align: center;
+  padding-top:3px;
+}
+#recherche{
+  display: flex;
+}
+#point{
+  border-radius: 50px;
+  background-color:#6d5ce8 ;
+  width: 30px;
+  height: 30px;
+  margin-left:var(--identite-margin);
+}
+
+.liste{
+  display: flex;
+  flex-direction: column;
+  width:calc(var(--identite-) / 2);
+  height: cal(var(--identite-heigth) / 2);
+  background:#897ef0;
+  border-radius: 5%;
+  border-color: #6d5ce8 ;
+  margin-left: calc(var(--identite-margin) / 2);
+  margin-top: var(--identite-margin);
+  padding-left: calc(Var(--liste-padding) / 2);
+}
+.picture{
+  position: relative;
+  width:var(--picture-height);
+  height: var(--picture-height);
+  border-radius: 50%;
+  background-color: #4c42a5 ;
+  margin-left:calc(var(--margin-picture-left) / 2);
+  margin-top: calc(var(--margin-picture-top) / 2);
+}
+.list{
+  display: flex;
+  margin-left: var(--identite-margin);
+}
+
+  </style>
 </head>
-
 <body>
-<div id="mySidenav" class="sidenav">
-    <a href="#">Nouveau client</a>
-    <a href="#">Dossiers medicaux</a>
-    <a href="#">disponibilité</a>
-    <a href="#">Contact</a>
-</div>
-<img src="not.jpg" class="off">
-<button class="deconnexion">
-    Mr/Mme &nbsp;XYX
-    <img src="off.jpg" class="off"/>
-</button>
-<span></span>
+    <div id="navbar">
+        <div >
+          <img src="croix bleu (1).png" id="logo"/>
+        </div>
+        <div id="menu">    
+    <nav>
+        <ol>
+          <li class="menu-item"><a href="#0">Home</a></li>
+          <li class="menu-item"><a href="#0">Nouveau patient</a></li>
+          <li class="menu-item">
+            <a href="#0">dossiers medicaux</a>
+          </li>
+          <li class="menu-item accordeon">
+            <a href="#0">disponibilité</a>
+            <ol class="sub-menu ">
+              <li class="menu-item"><a href="#0">disponibilité medecins</a></li>
+              <li class="menu-item"><a href="#0">disponibilité du materiel</a></li>
+            </ol>
+          </li>
+        </ol>
+    </nav>
 
+        </div>
+    </div>
+    <div id="content">
+        <div id="userinfo">
+            <img src="not.jpg" id="notification"/>
+            <span id="deconnexion">
+                <b>M/Mme xyz</b>
+                <button>a</button>
+            </span>
+        </div>
+        <div id="action">
+            gestion des dossiers medicaux
+        </div>
+        <div id="contenu">
+          <div id="confirmation">
+            <div id="recherche">
+              <div id="rechercher">rechercher</div>
+              <div id="point"></div>
+            </div>
+            <div id="identite">
+              <div id="pic">
+              </div>
+              <input type="text" name=""class="name" disabled>
+            </div>
+            <div id="boutons">
+              <span>
+                <button>Annuler</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button>Enregistrer</button>
+              </span>
+            </div>
+            <div class="list">
+              <div class="liste">
+                <div class="picture">
+                </div>
+                <input type="text" name=""class="name" value="" disabled>
+              </div>
+
+              <div class="liste">
+                <div class="picture">
+                </div>
+                <input type="text" name=""class="name" disabled>
+              </div>
+            </div>
+
+            <div class="list">
+              <div class="liste">
+                <div class="picture">
+                </div>
+                <input type="text" name=""class="name" disabled >
+              </div>
+
+              <div class="liste">
+                <div class="picture">
+                </div>
+                <input type="text" name=""class="name"  disabled>
+              </div>
+            </div>
+            
+
+          </div>
+          <div id="modification">
+            <div id="deco"></div>
+            <div id="antecedents">
+              <div class="entete">
+               dossier medical
+              </div>
+              <div id=""class="corps"></div>
+            </div>
+          </div>
+        </div>
+    </div>
 </body>
 </html>
