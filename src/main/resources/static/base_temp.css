@@ -1,0 +1,63 @@
+    /* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: auto; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgb(111, 48, 228); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 150px; /* Place content 150px from the top */
+    padding-left: 5px;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 2px 8px 32px;
+    margin-left: 2px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #493333;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    .deconnexion{font-size: 10px;}
+}
+
+/*position the place where the user can deconnect hiself*/
+.deconnexion{
+    position: relative;
+    margin-left: 85%;
+    margin-top: 2%;
+    border-radius: 25%;
+    background-color: rgb(247, 247, 247);
+    width: auto;
+    height: auto;
+
+}
+
+/* dimension the deconnexion button*/
+img{
+    width: 10px;
+    height: 10px;
+}
+span{
+    position: relative;
+    margin-left: 80%;
+    margin-top: 2%;
+    width: 4px;
+    height: 2px;
+}
